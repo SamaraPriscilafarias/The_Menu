@@ -1,90 +1,230 @@
-** {
-    padding: 0;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo img {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  padding: 10px;
+  border-radius: 8px; /* Bordas arredondadas */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #ffd700;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  background: url("../img/moqueca.jpeg") no-repeat center center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.menu-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.menu-section h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  font-size: 18px;
+  margin: 15px 0 5px;
+  font-weight: 700;
+}
+
+.menu-item p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 15px;
+}
+
+.about-section {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.about-section h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.about-section p {
+  text-align: left;
+  line-height: 1.5;
+}
+
+.reservation-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.reservation-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-option span {
+  color: #ffd700;
+  font-size: 18px;
+}
+
+/* Customer Reviews Section Styling */
+.customer-reviews {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.customer-reviews h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review {
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.review .star {
+  color: #ffd700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.review p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 36px;
   }
-  
-  .about {
-    text-align: center;
+
+  .nav ul {
+    gap: 10px;
   }
-  
+
+  .nav ul li a {
+    font-size: 14px;
+  }
+
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% / 3 - 60px);
-    margin: 10px;
-    padding: 20px;
-    box-shadow: 2px 2px 16px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    transition: all 0.5s ease;
-  }
-  
-  .card h4 {
-    text-align: center;
-  }
-  
-  .card:hover {
-    transform: scale(1.1);
-    z-index: 1;
-  }
-  
-  /* Estilização do footer */
-  .footer {
-    background-color: #8c847a;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  
-  .footer-content {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
   }
-  
-  .logo-section .logo {
-    max-width: 150px;
+
+  .reservation-options {
+    gap: 10px;
   }
-  
-  .info-section {
-    font-size: 14px;
-    line-height: 1.6;
+
+  .reviews {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .social-section a {
-    margin: 0 10px;
-    transition: transform 0.3s;
-  }
-  
-  .social-section img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1);
-  }
-  
-  .social-section a:hover {
-    transform: scale(1.2);
-  }
-  
-  .footer-bottom {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #d1c1f0;
-  }
-  
-  .footer-bottom a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
-    transition: color 0.3s;
-  }
-  
-  .footer-bottom a:hover {
-    color: #d1c1f0;
-  }
+}
