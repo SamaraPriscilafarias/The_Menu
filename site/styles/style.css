@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
+/* "Reset" e definição de fonte */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
   box-sizing: border-box;
 }
 
+/* Seção de navegação, logo, imagem principal */
 .header {
   display: flex;
   justify-content: space-between;
@@ -98,6 +100,8 @@
   color: white;
 }
 
+/* Seção principal do conteúdo, onde os pratos estão localizados */
+
 .menu-section {
   padding: 50px 20px;
   text-align: center;
@@ -117,12 +121,7 @@
   flex-wrap: wrap;
 }
 
-.menu-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 30px;
-}
+/* Seção das páginas secundárias, onde temos os ingredientes e a preparação, poderia ser usada apenas uma classe, mas para distinguir as duas regiões, optamos por colocar classes diferentes */
 
 .ingredients,
 .preparation {
@@ -153,6 +152,14 @@
   margin-bottom: 10px;
 }
 
+/* Seção de Menu, onde temos a transição em cada um dos itens dos cards, posicionamento com flexbox. Eventos de hover com aumento de escala */
+
+.menu-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
 .menu-item {
   background: white;
   border-radius: 8px;
@@ -192,6 +199,8 @@
   margin: 0 0 15px;
 }
 
+/* Seção do sobre nós */
+
 .about-section {
   background-color: #222;
   color: #fff;
@@ -210,43 +219,7 @@
   line-height: 1.5;
 }
 
-.reservation-options {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.reservation-option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #333;
-  padding: 15px 20px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 600px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.reservation-option span {
-  color: #ffd700;
-  font-size: 18px;
-}
-
-/* Customer Reviews Section Styling */
-.customer-reviews {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.customer-reviews h2 {
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 30px;
-}
+/* Seção de reviews dos usuários */
 
 .reviews {
   display: flex;
@@ -275,6 +248,8 @@
   font-size: 14px;
   color: #aaa;
 }
+
+/* CSS da seção do footer, elemento de link no footer, icones do font awesome e eventos de hover */
 
 footer {
   background-color: #f8f8f8;
@@ -309,7 +284,7 @@ footer .social-icons a:hover {
   color: gray; /* Cor ao passar o mouse */
 }
 
-/* Responsive Design */
+/* Responsividade */
 @media (max-width: 768px) {
   .content h1 {
     font-size: 36px;
@@ -326,10 +301,6 @@ footer .social-icons a:hover {
   .container {
     flex-direction: column;
     align-items: center;
-  }
-
-  .reservation-options {
-    gap: 10px;
   }
 
   .reviews {
