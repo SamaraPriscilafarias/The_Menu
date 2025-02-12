@@ -56,28 +56,28 @@
 
 .borscht-main {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   background: url("../img/borscht.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .moqueca-main {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   background: url("../img/moqueca2.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .plov-main {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   background: url("../img/plov.jpg") no-repeat center center;
   background-size: cover;
 }
 
 .feijoada-main {
   position: relative;
-  height: 100vh;
+  height: 80vh;
   background: url("../img/feijoada.jpg") no-repeat center center;
   background-size: cover;
 }
