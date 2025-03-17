@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
+}
+
 /* "Reset" e definição de fonte */
 * {
   margin: 0;
@@ -258,6 +266,28 @@ footer .social-icons a {
 
 footer .social-icons a:hover {
   color: gray; /* Cor ao passar o mouse */
+}
+
+.social-icons a i,
+.footer-content p i {
+  transition: transform 0.3s ease; /* Suaviza a transição */
+}
+
+/* Animação de bounce */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0); /* Posição inicial e final */
+  }
+  50% {
+    transform: translateY(-5px); /* Movimento para cima */
+  }
+}
+
+/* Aplica a animação ao passar o mouse */
+.social-icons a:hover i,
+.footer-content p:hover i {
+  animation: bounce 0.5s ease;
 }
 
 /* Responsividade */
